@@ -2,7 +2,10 @@
 <storages>
     <storage>
         <id>0</id>
-        <entities>
-        </entities>
+        <entities/>
+    </storage>
+    <storage>
+        <id>1</id>
+        <entities/>
     </storage>
 </storages>

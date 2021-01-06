@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <users>
+    <user>
+        <id>1</id>
+        <login>a</login>
+        <password>a</password>
+        <position>Админ</position>
+        <name>a</name>
+    </user>
+    <user>
+        <id>2</id>
+        <login>p</login>
+        <password>p</password>
+        <position>Продавец</position>
+        <name>p</name>
+    </user>
+    <user>
+        <id>3</id>
+        <login>u</login>
+        <password>u</password>
+        <position>Пользователь</position>
+        <name>u</name>
+    </user>
 </users>

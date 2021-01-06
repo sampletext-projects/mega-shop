@@ -37,7 +37,7 @@ public class StorekeeperScreenController implements FXMLHelper.PreloadableContro
     @Override
     public final <T> void preload(T... objects) {
         if (User.activeUser != null) {
-            greetingLabel.setText(String.format("Hello, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
+            greetingLabel.setText(String.format("Здравствуйте, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
         }
 
         allOrders = Database.getOrdersDb().select(null);
@@ -58,14 +58,14 @@ public class StorekeeperScreenController implements FXMLHelper.PreloadableContro
     public void onButtonFinishClick(ActionEvent actionEvent) {
         int selectedIndex = allOrdersTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Order is not selected", "Please select an order to finish!");
+            FXMLHelper.alertAndWait("Ошибка", "Заказ не выбран", "Выберите заказ для завершения!");
             return;
         }
 
         Order order = allOrdersTable.getItems().get(selectedIndex);
 
         if (order.isFinished()) {
-            FXMLHelper.alertAndWait("Notice", "Unsupported action", "You can't finish a finished order");
+            FXMLHelper.alertAndWait("Внимание", "Неподдерживаемое действие", "Вы не можете завершить уже завершённый заказ");
             return;
         }
 
@@ -73,13 +73,13 @@ public class StorekeeperScreenController implements FXMLHelper.PreloadableContro
         order.push();
         fillTable();
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Order was finished!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Заказ завершён!");
     }
 
     public void onButtonShowClick(ActionEvent actionEvent) {
         int selectedIndex = allOrdersTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Order is not selected", "Please select an order to show!");
+            FXMLHelper.alertAndWait("Ошибка", "Заказ не выбран", "Выберите заказ для показа!");
             return;
         }
         Order order = allOrdersTable.getItems().get(selectedIndex);

@@ -51,14 +51,14 @@ public class UserOrdersScreenController implements FXMLHelper.PreloadableControl
     public void onButtonCancelClick(ActionEvent actionEvent) {
         int selectedIndex = userOrdersTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Order is not selected", "Please select an order to cancel!");
+            FXMLHelper.alertAndWait("Ошибка", "Заказ не выбран", "Выберите заказ для отмены!");
             return;
         }
 
         Order order = userOrdersTable.getItems().get(selectedIndex);
 
         if (order.isFinished()) {
-            FXMLHelper.alertAndWait("Notice", "Unsupported action", "You can't cancel a finished order");
+            FXMLHelper.alertAndWait("Внимание", "Неподдерживаемое действие", "Вы не можете отменить завершённый заказ");
             return;
         }
 
@@ -90,7 +90,7 @@ public class UserOrdersScreenController implements FXMLHelper.PreloadableControl
         order.getStorage().erase();//remove order storage
         order.erase();//remove order itself
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Order was canceled!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Заказ был отменён!");
 
         fillTable();
     }
@@ -98,7 +98,7 @@ public class UserOrdersScreenController implements FXMLHelper.PreloadableControl
     public void onButtonShowClick(ActionEvent actionEvent) {
         int selectedIndex = userOrdersTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Order is not selected", "Please select an order to show!");
+            FXMLHelper.alertAndWait("Ошибка", "Заказ не выбран", "Выберите заказ для показа!");
             return;
         }
         Order order = userOrdersTable.getItems().get(selectedIndex);

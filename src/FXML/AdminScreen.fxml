@@ -9,7 +9,7 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Label fx:id="greetingLabel" text="GreetingLabel"/>
+                <Label fx:id="greetingLabel" text="Приветствие"/>
             </VBox>
             <HBox alignment="CENTER_RIGHT" prefWidth="230">
                 <HBox alignment="CENTER" prefWidth="230">
@@ -22,7 +22,7 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER" prefWidth="460">
-                <Label alignment="CENTER" prefWidth="460" text="Shop Storage">
+                <Label alignment="CENTER" prefWidth="460" text="Склад магазина">
                     <font>
                         <Font size="25.0"/>
                     </font>
@@ -37,11 +37,11 @@
             <VBox alignment="CENTER" prefWidth="460">
                 <TableView fx:id="shopEntitiesTableView" prefHeight="250.0" prefWidth="460.0">
                     <columns>
-                        <TableColumn fx:id="columnBrand" text="Brand"/>
-                        <TableColumn fx:id="columnModel" text="Model"/>
-                        <TableColumn fx:id="columnType" text="Type"/>
-                        <TableColumn fx:id="columnPrice" text="Price"/>
-                        <TableColumn fx:id="columnAmount" text="Amount"/>
+                        <TableColumn fx:id="columnBrand" text="Бренд"/>
+                        <TableColumn fx:id="columnModel" text="Модель"/>
+                        <TableColumn fx:id="columnType" text="Тип"/>
+                        <TableColumn fx:id="columnPrice" text="Цена"/>
+                        <TableColumn fx:id="columnAmount" text="Количество"/>
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
@@ -56,7 +56,7 @@
         <HBox alignment="CENTER" prefHeight="10"/>
 
         <HBox alignment="CENTER">
-            <Label alignment="CENTER" prefWidth="230" text="Operations">
+            <Label alignment="CENTER" prefWidth="230" text="Операции">
                 <font>
                     <Font size="25.0"/>
                 </font>
@@ -68,13 +68,13 @@
             <HBox alignment="CENTER" prefWidth="460" spacing="10">
                 <Separator orientation="VERTICAL"/>
                 <Button onAction="#onButtonAddClick" prefWidth="140"
-                        text="Add Entity"/>
+                        text="Добавить сущность"/>
                 <Separator orientation="VERTICAL"/>
                 <Button onAction="#onButtonDeleteClick" prefWidth="140"
-                        text="Delete"/>
+                        text="Удалить"/>
                 <Separator orientation="VERTICAL"/>
                 <Button onAction="#onButtonEditClick" prefWidth="140"
-                        text="Edit"/>
+                        text="Редактировать"/>
                 <Separator orientation="VERTICAL"/>
             </HBox>
             <Separator/>
@@ -86,7 +86,7 @@
             <VBox alignment="CENTER_LEFT" prefWidth="230"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="230">
                 <HBox alignment="CENTER_RIGHT" prefWidth="230">
-                    <Button onAction="#onButtonLogOutClick" prefWidth="100" text="Log out"/>
+                    <Button onAction="#onButtonLogOutClick" prefWidth="100" text="Выход"/>
                 </HBox>
             </VBox>
         </HBox>

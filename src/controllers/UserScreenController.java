@@ -66,7 +66,7 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
     @Override
     public final <T> void preload(T... object) {
         if (User.activeUser != null) {
-            greetingLabel.setText(String.format("Hello, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
+            greetingLabel.setText(String.format("Здравствуйте, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
         }
 
         columnBrand.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getShopItem().getBrand()));
@@ -83,7 +83,7 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
 
         mainStorage = Database.getShopStoragesDb().getMainStorage();
         userCart = Database.getCartsDb().getByUserId(User.activeUser.getId());
-        labelCost.setText(String.format("Total: %.2f c.u.", userCart.getStorage().getCost()));
+        labelCost.setText(String.format("Сумма: %.2f р", userCart.getStorage().getCost()));
 
         fillTables();
     }
@@ -110,7 +110,7 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
     public void onButtonAddToCartClick(ActionEvent actionEvent) {
         int selectedIndex = shopStorageTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Entity is not selected", "Please select an entity to add to cart!");
+            FXMLHelper.alertAndWait("Ошибка", "Сущность не выбрана", "Пожалуйста, выберите сущность для добавления в корзину!");
             return;
         }
 
@@ -118,7 +118,7 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
         ShopEntity selectedEntity = shopStorageTable.getItems().get(selectedIndex);
 
         if (selectedEntity.getAmount() == 0) {
-            FXMLHelper.alertAndWait("Error", "Entity is not available", "Amount of this entity is 0!");
+            FXMLHelper.alertAndWait("Ошибка", "Сущность недоступна", "Сущность закончилась на складе!");
             return;
         }
 
@@ -152,9 +152,9 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
             userCart.getStorage().pull();
         }
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Entity was added to your cart!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Сущность была добавлена в корзину!");
 
-        labelCost.setText(String.format("Total: %.2f c.u.", userCart.getStorage().getCost()));
+        labelCost.setText(String.format("Сумма: %.2f р", userCart.getStorage().getCost()));
 
         fillTables();
     }
@@ -162,7 +162,7 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
     public void onButtonRemoveOneClick(ActionEvent actionEvent) {
         int selectedIndex = userCartTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Entity is not selected", "Please select an entity to remove from cart!");
+            FXMLHelper.alertAndWait("Ошибка", "Сущность не выбрана", "Пожалуйста, выберите сущность для удаления из корзины!");
             return;
         }
 
@@ -193,16 +193,16 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
         shopEntity.setAmount(shopEntity.getAmount() + 1);
         shopEntity.push();
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Entity was removed from your cart!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Сущность была удалена из корзины!");
 
-        labelCost.setText(String.format("Total: %.2f c.u.", userCart.getStorage().getCost()));
+        labelCost.setText(String.format("Сумма: %.2f р", userCart.getStorage().getCost()));
 
         fillTables();
     }
 
     public void onButtonOrderClick(ActionEvent actionEvent) {
         if (userCart.getStorage().getEntities().isEmpty()) {
-            FXMLHelper.alertAndWait("Error", "Cart is empty", "Please add something to cart to make an order!");
+            FXMLHelper.alertAndWait("Ошибка", "Корзина пуста", "Добавьте что-нибудь в корзину, чтобы сделать заказ!");
             return;
         }
 
@@ -220,9 +220,9 @@ public class UserScreenController implements FXMLHelper.PreloadableController, F
 
         fillTables();
 
-        labelCost.setText(String.format("Total: %.2f c.u.", userCart.getStorage().getCost()));
+        labelCost.setText(String.format("Сумма: %.2f р", userCart.getStorage().getCost()));
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Order was created!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Заказ был создан!");
     }
 
     public void onButtonMyOrdersClick(ActionEvent actionEvent) {

@@ -16,28 +16,28 @@ public class LoginScreenController {
         String password = passwordTextField.getText();
 
         if (login.trim().length() == 0 || password.trim().length() == 0) {
-            FXMLHelper.alertAndWait("Error", "Login or password are empty", "Please fill in all fields!");
+            FXMLHelper.alertAndWait("Ошибка", "Логин или пароль не заполнены", "Пожалуйста, заполните все поля!");
             return;
         }
 
         User loginedUser = Database.getUsersDb().selectByLoginAndPassword(login, password);
 
         if (loginedUser == null) {
-            FXMLHelper.alertAndWait("Error", "User not found", "Please check all fields!");
+            FXMLHelper.alertAndWait("Ошибка", "Пользователь не найден", "Пожалуйста, проверьте все поля!");
             return;
         }
 
         User.activeUser = loginedUser;
         switch (loginedUser.getPosition()) {
-            case "Admin":
+            case "Админ":
                 AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
                 adminScreenController.preload();
                 break;
-            case "User":
+            case "Пользователь":
                 UserScreenController userScreenController = FXMLHelper.loadScreenReturnController("UserScreen");
                 userScreenController.preload();
                 break;
-            case "Storekeeper":
+            case "Продавец":
                 StorekeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StorekeeperScreen");
                 storeKeeperScreenController.preload();
                 break;

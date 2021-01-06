@@ -35,7 +35,7 @@ public class ShopEntityScreenController implements FXMLHelper.PreloadableControl
         comboBoxItems.setConverter(new StringConverter<ShopItem>() {
             @Override
             public String toString(ShopItem item) {
-                return String.format("%s %s %s: %.2f c.u.", item.getType(), item.getBrand(), item.getModel(), item.getPrice());
+                return String.format("%s %s %s: %.2f р", item.getType(), item.getBrand(), item.getModel(), item.getPrice());
             }
 
             @Override
@@ -54,10 +54,10 @@ public class ShopEntityScreenController implements FXMLHelper.PreloadableControl
         });
         comboBoxItems.setItems(FXCollections.observableArrayList(shopItems));
         if (objects.length == 0) {
-            labelInfo.setText("Creating Entity");
+            labelInfo.setText("Создание сущности");
         } else {
             activeEntity = (ShopEntity) objects[0];
-            labelInfo.setText("Editing Entity " + activeEntity.getId());
+            labelInfo.setText("Редактирование сущности " + activeEntity.getId());
             comboBoxItems.getSelectionModel().select(shopItems.indexOf(activeEntity.getShopItem()));
             spinnerAmount.getValueFactory().setValue(activeEntity.getAmount());
         }

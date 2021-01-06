@@ -9,7 +9,7 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Label fx:id="greetingLabel" text="GreetingLabel"/>
+                <Label fx:id="greetingLabel" text="Приветствие"/>
             </VBox>
             <HBox alignment="CENTER_RIGHT" prefWidth="230">
                 <HBox alignment="CENTER" prefWidth="230">
@@ -22,7 +22,7 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER" prefWidth="460">
-                <Label alignment="CENTER" prefWidth="460" text="Active orders">
+                <Label alignment="CENTER" prefWidth="460" text="Активные заказы">
                     <font>
                         <Font size="25.0"/>
                     </font>
@@ -37,10 +37,10 @@
             <VBox alignment="CENTER" prefWidth="460">
                 <TableView fx:id="allOrdersTable" prefHeight="250.0" prefWidth="360.0">
                     <columns>
-                        <TableColumn fx:id="userNameColumn" prefWidth="75.0" text="User"/>
-                        <TableColumn fx:id="itemsCountColumn" prefWidth="75.0" text="Items"/>
-                        <TableColumn fx:id="costColumn" prefWidth="75.0" text="Cost"/>
-                        <TableColumn fx:id="finishedColumn" prefWidth="75.0" text="Finished"/>
+                        <TableColumn fx:id="userNameColumn" prefWidth="75.0" text="Пользователь"/>
+                        <TableColumn fx:id="itemsCountColumn" prefWidth="75.0" text="Товары"/>
+                        <TableColumn fx:id="costColumn" prefWidth="75.0" text="Стоимость"/>
+                        <TableColumn fx:id="finishedColumn" prefWidth="75.0" text="Завершён?"/>
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
@@ -55,7 +55,7 @@
         <HBox alignment="CENTER" prefHeight="10"/>
 
         <HBox alignment="CENTER">
-            <Label alignment="CENTER" prefWidth="230" text="Operations">
+            <Label alignment="CENTER" prefWidth="230" text="Операции">
                 <font>
                     <Font size="25.0"/>
                 </font>
@@ -67,10 +67,10 @@
             <HBox alignment="CENTER" prefWidth="460" spacing="10">
                 <Separator orientation="VERTICAL"/>
                 <Button onAction="#onButtonFinishClick" prefWidth="140"
-                        text="Finish Order"/>
+                        text="Завершить заказ"/>
                 <Separator orientation="VERTICAL"/>
                 <Button onAction="#onButtonShowClick" prefWidth="140"
-                        text="Show Order"/>
+                        text="Показать заказ"/>
                 <Separator orientation="VERTICAL"/>
             </HBox>
             <Separator/>
@@ -82,7 +82,7 @@
             <VBox alignment="CENTER_LEFT" prefWidth="230"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="230">
                 <HBox alignment="CENTER_RIGHT" prefWidth="230">
-                    <Button onAction="#onButtonLogOutClick" prefWidth="100" text="Log out"/>
+                    <Button onAction="#onButtonLogOutClick" prefWidth="100" text="Выход"/>
                 </HBox>
             </VBox>
         </HBox>

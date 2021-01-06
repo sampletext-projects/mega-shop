@@ -38,7 +38,7 @@ public class OrderScreenController implements FXMLHelper.PreloadableController {
     @Override
     public final <T> void preload(T... objects) {
         if (objects.length == 0) {
-            throw new IllegalArgumentException("Order passed was null");
+            throw new IllegalArgumentException("Не передан заказ");
         }
 
         activeOrder = (Order) objects[0];

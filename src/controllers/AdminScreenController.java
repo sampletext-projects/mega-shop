@@ -36,7 +36,7 @@ public class AdminScreenController implements FXMLHelper.PreloadableController, 
     @Override
     public final <T> void preload(T... objects) {
         if (User.activeUser != null) {
-            greetingLabel.setText(String.format("Hello, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
+            greetingLabel.setText(String.format("Здравствуйте, %s %s", User.activeUser.getPosition(), User.activeUser.getName()));
         }
 
         columnBrand.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getShopItem().getBrand()));
@@ -73,7 +73,7 @@ public class AdminScreenController implements FXMLHelper.PreloadableController, 
     public void onButtonEditClick(ActionEvent actionEvent) {
         int selectedIndex = shopEntitiesTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Entity is not selected", "Please select an entity to edit!");
+            FXMLHelper.alertAndWait("Ошибка", "Сущность не выбрана", "Пожалуйста, выберите сущность для редактирования!");
             return;
         }
         ShopEntity entity = shopEntitiesTableView.getItems().get(selectedIndex);
@@ -85,7 +85,7 @@ public class AdminScreenController implements FXMLHelper.PreloadableController, 
     public void onButtonDeleteClick(ActionEvent actionEvent) {
         int selectedIndex = shopEntitiesTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
-            FXMLHelper.alertAndWait("Error", "Entity is not selected", "Please select an entity to delete!");
+            FXMLHelper.alertAndWait("Ошибка", "Сущность не выбрана", "Пожалуйста, выберите сущность для удаления!");
             return;
         }
         ShopEntity entity = shopEntitiesTableView.getItems().get(selectedIndex);
@@ -94,7 +94,7 @@ public class AdminScreenController implements FXMLHelper.PreloadableController, 
         entity.erase();//erase shop entity
         fillTable();
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Entity was deleted!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Сущность удалена!");
     }
 
     public void onButtonLogOutClick(ActionEvent actionEvent) {

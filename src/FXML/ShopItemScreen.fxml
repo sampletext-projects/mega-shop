@@ -9,7 +9,7 @@
     <VBox alignment="CENTER" prefHeight="500.0" prefWidth="460.0">
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Label fx:id="labelInfo" text="Label Info">
+                <Label fx:id="labelInfo" text="Информация">
                     <font>
                         <Font size="25.0"/>
                     </font>
@@ -27,7 +27,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Brand"/>
+                <Label alignment="CENTER" prefWidth="150" text="Бренд"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -41,7 +41,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Model"/>
+                <Label alignment="CENTER" prefWidth="150" text="Модель"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -55,7 +55,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Type"/>
+                <Label alignment="CENTER" prefWidth="150" text="Тип"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -69,7 +69,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Price"/>
+                <Label alignment="CENTER" prefWidth="150" text="Цена"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -94,10 +94,10 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Button alignment="CENTER" onAction="#onButtonBackClick" prefWidth="150" text="Back"/>
+                <Button alignment="CENTER" onAction="#onButtonBackClick" prefWidth="150" text="Назад"/>
             </VBox>
             <VBox alignment="CENTER_RIGHT" prefWidth="230">
-                <Button alignment="CENTER" onAction="#onButtonSaveClick" prefWidth="150" text="Save"/>
+                <Button alignment="CENTER" onAction="#onButtonSaveClick" prefWidth="150" text="Сохранить"/>
             </VBox>
         </HBox>
 

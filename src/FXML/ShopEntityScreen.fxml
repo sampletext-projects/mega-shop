@@ -11,7 +11,7 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Label fx:id="labelInfo" text="Label Info">
+                <Label fx:id="labelInfo" text="Информация">
                     <font>
                         <Font size="25.0"/>
                     </font>
@@ -29,7 +29,7 @@
         <HBox alignment="CENTER_LEFT">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="130">
-                <Label alignment="CENTER" prefWidth="130" text="Item"/>
+                <Label alignment="CENTER" prefWidth="130" text="Товар"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="180">
@@ -37,8 +37,8 @@
             </VBox>
             <Separator orientation="VERTICAL"/>
             <HBox alignment="CENTER" spacing="6">
-                <Button alignment="CENTER" onAction="#onButtonEditItemClick" prefWidth="60" text="Edit"/>
-                <Button alignment="CENTER" onAction="#onButtonCreateItemClick" prefWidth="60" text="Create"/>
+                <Button alignment="CENTER" onAction="#onButtonEditItemClick" prefWidth="60" text="Редактировать"/>
+                <Button alignment="CENTER" onAction="#onButtonCreateItemClick" prefWidth="60" text="Создать"/>
             </HBox>
             <Separator orientation="VERTICAL"/>
         </HBox>
@@ -48,7 +48,7 @@
         <HBox alignment="CENTER_LEFT">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="130">
-                <Label alignment="CENTER" prefWidth="130" text="Amount"/>
+                <Label alignment="CENTER" prefWidth="130" text="Количество"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="312">
@@ -73,10 +73,10 @@
 
         <HBox alignment="CENTER">
             <VBox alignment="CENTER_LEFT" prefWidth="230">
-                <Button alignment="CENTER" onAction="#onButtonBackClick" prefWidth="150" text="Back"/>
+                <Button alignment="CENTER" onAction="#onButtonBackClick" prefWidth="150" text="Назад"/>
             </VBox>
             <VBox alignment="CENTER_RIGHT" prefWidth="230">
-                <Button alignment="CENTER" onAction="#onButtonSaveClick" prefWidth="150" text="Save"/>
+                <Button alignment="CENTER" onAction="#onButtonSaveClick" prefWidth="150" text="Сохранить"/>
             </VBox>
         </HBox>
 

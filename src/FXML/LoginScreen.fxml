@@ -11,7 +11,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Login"/>
+                <Label alignment="CENTER" prefWidth="150" text="Логин"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -25,7 +25,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Password"/>
+                <Label alignment="CENTER" prefWidth="150" text="Пароль"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -43,7 +43,7 @@
         <HBox alignment="CENTER_RIGHT">
             <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
-                <Button alignment="CENTER" onAction="#onButtonLogInClick" prefWidth="150" text="Log in"/>
+                <Button alignment="CENTER" onAction="#onButtonLogInClick" prefWidth="150" text="Вход"/>
             </VBox>
         </HBox>
 
@@ -56,7 +56,7 @@
         <HBox alignment="CENTER_RIGHT">
             <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
-                <Button alignment="CENTER" onAction="#onButtonRegistrationCLick" prefWidth="150" text="Registration"/>
+                <Button alignment="CENTER" onAction="#onButtonRegistrationCLick" prefWidth="150" text="Регистрация"/>
             </VBox>
         </HBox>
 

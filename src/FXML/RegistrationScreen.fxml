@@ -15,7 +15,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Name"/>
+                <Label alignment="CENTER" prefWidth="150" text="Имя"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -29,7 +29,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Login"/>
+                <Label alignment="CENTER" prefWidth="150" text="Логин"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -43,7 +43,7 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Password"/>
+                <Label alignment="CENTER" prefWidth="150" text="Пароль"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
@@ -57,16 +57,16 @@
         <HBox alignment="CENTER">
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_RIGHT" prefWidth="150">
-                <Label alignment="CENTER" prefWidth="150" text="Position"/>
+                <Label alignment="CENTER" prefWidth="150" text="Позиция"/>
             </VBox>
             <Separator orientation="VERTICAL"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
                 <ComboBox fx:id="positionComboBox" prefWidth="150" value="">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Admin"/>
-                            <String fx:value="Storekeeper"/>
-                            <String fx:value="User"/>
+                            <String fx:value="Админ"/>
+                            <String fx:value="Продавец"/>
+                            <String fx:value="Пользователь"/>
                         </FXCollections>
                     </items>
                 </ComboBox>
@@ -83,7 +83,7 @@
         <HBox alignment="CENTER_RIGHT">
             <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
             <VBox alignment="CENTER_LEFT" prefWidth="150">
-                <Button alignment="CENTER" prefWidth="150" onAction="#onButtonRegistrationClick" text="Registration"/>
+                <Button alignment="CENTER" prefWidth="150" onAction="#onButtonRegistrationClick" text="Регистрация"/>
             </VBox>
         </HBox>
 

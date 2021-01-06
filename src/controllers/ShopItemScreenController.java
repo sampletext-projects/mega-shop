@@ -36,10 +36,10 @@ public class ShopItemScreenController implements FXMLHelper.PreloadableControlle
         });
 
         if (objects.length == 0) {
-            labelInfo.setText("Creating Item");
+            labelInfo.setText("Создание элемента");
         } else {
             activeItem = (ShopItem) objects[0];
-            labelInfo.setText("Editing Item " + activeItem.getId());
+            labelInfo.setText("Редактирование элемента " + activeItem.getId());
             textFieldBrand.setText(activeItem.getBrand());
             textFieldModel.setText(activeItem.getModel());
             textFieldType.setText(activeItem.getType());
@@ -54,7 +54,7 @@ public class ShopItemScreenController implements FXMLHelper.PreloadableControlle
         float price = spinnerPrice.getValue().floatValue();
 
         if (brand.trim().length() == 0 || model.trim().length() == 0 || type.trim().length() == 0) {
-            FXMLHelper.alertAndWait("Error", "Brand, Model or Type are empty", "Please fill in all fields!");
+            FXMLHelper.alertAndWait("Ошибка", "Бренд, модель или тип не заполнены", "Пожалуйста, заполните все поля!");
             return;
         }
 
@@ -68,7 +68,7 @@ public class ShopItemScreenController implements FXMLHelper.PreloadableControlle
             activeItem.push();
         }
 
-        FXMLHelper.alertAndWait("Success", "Operation succeeded", "Item was saved!");
+        FXMLHelper.alertAndWait("Успех", "Операция выполнена", "Товар сохранён!");
 
         FXMLHelper.backScreen();
     }
