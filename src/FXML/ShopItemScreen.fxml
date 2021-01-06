@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.Double?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="500.0" prefWidth="500.0"
+      xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="controllers.ShopItemScreenController">
+    <VBox alignment="CENTER" prefHeight="500.0" prefWidth="460.0">
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" prefWidth="230">
+                <Label fx:id="labelInfo" text="Label Info">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Label>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="230">
+
+            </HBox>
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="25"/>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Brand"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <TextField fx:id="textFieldBrand" alignment="CENTER" prefWidth="150"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Model"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <TextField fx:id="textFieldModel" alignment="CENTER" prefWidth="150"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Type"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <TextField fx:id="textFieldType" alignment="CENTER" prefWidth="150"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Price"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <Spinner fx:id="spinnerPrice" editable="true" prefWidth="150">
+                    <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory min="0" amountToStepBy="0.01">
+                            <max>
+                                <Double fx:constant="MAX_VALUE"/>
+                            </max>
+                        </SpinnerValueFactory.DoubleSpinnerValueFactory>
+                    </valueFactory>
+                </Spinner>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox prefHeight="25"/>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" prefWidth="230">
+                <Button alignment="CENTER" onAction="#onButtonBackClick" prefWidth="150" text="Back"/>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefWidth="230">
+                <Button alignment="CENTER" onAction="#onButtonSaveClick" prefWidth="150" text="Save"/>
+            </VBox>
+        </HBox>
+
+        <Separator/>
+
+    </VBox>
+</HBox>

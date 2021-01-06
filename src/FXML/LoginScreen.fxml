@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="500.0" prefWidth="500.0"
+      xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="controllers.LoginScreenController">
+    <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0">
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Login"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <TextField fx:id="loginTextField" alignment="CENTER" prefWidth="150"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox alignment="CENTER">
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                <Label alignment="CENTER" prefWidth="150" text="Password"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <PasswordField fx:id="passwordTextField" alignment="CENTER" prefWidth="150"/>
+            </VBox>
+            <Separator orientation="VERTICAL"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox prefHeight="25"/>
+
+        <Separator/>
+
+        <HBox alignment="CENTER_RIGHT">
+            <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <Button alignment="CENTER" onAction="#onButtonLogInClick" prefWidth="150" text="Log in"/>
+            </VBox>
+        </HBox>
+
+        <Separator/>
+
+        <HBox prefHeight="10"/>
+
+        <Separator/>
+
+        <HBox alignment="CENTER_RIGHT">
+            <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
+            <VBox alignment="CENTER_LEFT" prefWidth="150">
+                <Button alignment="CENTER" onAction="#onButtonRegistrationCLick" prefWidth="150" text="Registration"/>
+            </VBox>
+        </HBox>
+
+        <Separator/>
+
+    </VBox>
+</HBox>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="500.0" prefWidth="500.0"
+      xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="controllers.AdminScreenController">
+    <VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0">
+
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" prefWidth="230">
+                <Label fx:id="greetingLabel" text="GreetingLabel"/>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="230">
+                <HBox alignment="CENTER" prefWidth="230">
+
+                </HBox>
+            </HBox>
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="25"/>
+
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER" prefWidth="460">
+                <Label alignment="CENTER" prefWidth="460" text="Shop Storage">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Label>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefWidth="0">
+
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER" prefWidth="460">
+                <TableView fx:id="shopEntitiesTableView" prefHeight="250.0" prefWidth="460.0">
+                    <columns>
+                        <TableColumn fx:id="columnBrand" text="Brand"/>
+                        <TableColumn fx:id="columnModel" text="Model"/>
+                        <TableColumn fx:id="columnType" text="Type"/>
+                        <TableColumn fx:id="columnPrice" text="Price"/>
+                        <TableColumn fx:id="columnAmount" text="Amount"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefWidth="0" minHeight="250" spacing="10">
+
+            </VBox>
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="10"/>
+
+        <HBox alignment="CENTER">
+            <Label alignment="CENTER" prefWidth="230" text="Operations">
+                <font>
+                    <Font size="25.0"/>
+                </font>
+            </Label>
+        </HBox>
+
+        <VBox alignment="CENTER" maxWidth="460">
+            <Separator/>
+            <HBox alignment="CENTER" prefWidth="460" spacing="10">
+                <Separator orientation="VERTICAL"/>
+                <Button onAction="#onButtonAddClick" prefWidth="140"
+                        text="Add Entity"/>
+                <Separator orientation="VERTICAL"/>
+                <Button onAction="#onButtonDeleteClick" prefWidth="140"
+                        text="Delete"/>
+                <Separator orientation="VERTICAL"/>
+                <Button onAction="#onButtonEditClick" prefWidth="140"
+                        text="Edit"/>
+                <Separator orientation="VERTICAL"/>
+            </HBox>
+            <Separator/>
+        </VBox>
+
+        <HBox alignment="CENTER" prefHeight="25"/>
+
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" prefWidth="230"/>
+            <VBox alignment="CENTER_RIGHT" prefWidth="230">
+                <HBox alignment="CENTER_RIGHT" prefWidth="230">
+                    <Button onAction="#onButtonLogOutClick" prefWidth="100" text="Log out"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</HBox>
+
